@@ -1,38 +1,31 @@
-# create-svelte
+# Tour de App - SvelteKit boiler plate
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Šablona pro vývoj aplikace v soutěži Tour de App společně s vytvořením a nahráním výstupu využívající framework [SvelteKit](https://svelte.dev/docs/kit)
 
-## Creating a project
+## Lokální spuštění
 
-If you're seeing this, you've probably already done this step. Congrats!
+Prerekvizity
 
-```bash
-# create a new project in the current directory
-npx sv create
+#### Windows
 
-# create a new project in my-app
-npx sv create my-app
-```
+- Nainstalovaný [WSL2 (Windows Subsystem for Linux)](https://learn.microsoft.com/en-us/windows/wsl/install)
+- Nainstalovaný a běžící [Docker](https://www.docker.com/)
 
-## Developing
+#### Linux / MacOS
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- Nainstalovaný a běžící [Docker](https://www.docker.com/)
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+    docker build . -t tda-sveltekit
+    docker run -p 3000:3000 tda-sveltekit
 ```
 
-## Building
+Aplikace bude následně přístupná na `http://localhost:3000`
 
-To create a production version of your app:
+## Lokální vývoj
 
-```bash
-npm run build
-```
+Aplikace je možné spustit v režimu vývoje, pomocí příkazu `npm run dev`. Tím se spustí server na adrese `http://localhost:5173`, kde uvidíte svojí aplikaci.
 
-You can preview the production build with `npm run preview`.
+## Odevzdání
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Jak odevzdat svojí aplikaci můžete najít v našich [vzdělávacích materiálech](https://tourde.app/vzdelavaci-materialy/jak-odevzdavat)
